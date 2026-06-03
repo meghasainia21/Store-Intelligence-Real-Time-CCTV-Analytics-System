@@ -1,6 +1,3 @@
-"""
-heatmap.py — Zone dwell frequency heatmap, normalised 0–100.
-"""
 
 from __future__ import annotations
 

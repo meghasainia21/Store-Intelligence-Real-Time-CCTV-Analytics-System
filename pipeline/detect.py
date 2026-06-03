@@ -47,10 +47,7 @@ def frame_to_timestamp(clip_start: datetime, frame_idx: int, fps: float) -> str:
 
 
 def load_yolo_model(device: str):
-    """
-    Load YOLOv8n for person detection.
-    Falls back to a mock model when ultralytics is unavailable (CI / no-GPU env).
-    """
+    
     try:
         from ultralytics import YOLO  # type: ignore
         model = YOLO("yolov8n.pt")
@@ -63,7 +60,7 @@ def load_yolo_model(device: str):
 
 
 def detect_persons_ultralytics(model, frame: np.ndarray, conf_threshold: float):
-    """Run YOLOv8 inference and return list of (bbox, confidence)."""
+   
     results = model(frame, classes=[0], conf=conf_threshold, verbose=False)
     detections = []
     for r in results:
@@ -75,10 +72,7 @@ def detect_persons_ultralytics(model, frame: np.ndarray, conf_threshold: float):
 
 
 def detect_persons_mock(frame: np.ndarray, frame_idx: int):
-    """
-    Mock detections for environments without GPU / ultralytics.
-    Simulates a realistic retail scenario: 0-4 people per frame cluster.
-    """
+    
     rng = np.random.default_rng(frame_idx // 15)
     h, w = frame.shape[:2]
     n = int(rng.choice([0, 0, 1, 1, 1, 2, 2, 3], p=[0.15, 0.1, 0.2, 0.15, 0.1, 0.15, 0.1, 0.05]))
@@ -94,11 +88,7 @@ def detect_persons_mock(frame: np.ndarray, frame_idx: int):
 
 
 def classify_staff(frame: np.ndarray, bbox: list) -> bool:
-    """
-    Heuristic staff classifier based on uniform colour profile.
-    Retail staff uniforms are typically solid dark/branded colours.
-    Returns True if person is likely staff.
-    """
+   
     x1, y1, x2, y2 = [int(v) for v in bbox]
     roi = frame[max(0, y1):y2, max(0, x1):x2]
     if roi.size == 0:

@@ -1,9 +1,4 @@
-"""
-funnel.py — Conversion funnel: Entry → Zone Visit → Billing Queue → Purchase.
 
-Session is the unit. Re-entries do not double-count a visitor.
-Stages and their drop-off percentages are computed from session-level flags.
-"""
 
 from __future__ import annotations
 

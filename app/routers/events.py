@@ -1,10 +1,3 @@
-"""
-routers/events.py — POST /events/ingest
-
-Idempotent batch ingest. Accepts up to 500 events per call.
-Returns partial success on malformed events.
-"""
-
 import logging
 from typing import List
 

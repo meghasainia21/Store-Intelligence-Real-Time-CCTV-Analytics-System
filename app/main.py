@@ -1,6 +1,3 @@
-"""
-main.py — Store Intelligence API entrypoint (FIXED VERSION)
-"""
 
 import logging
 import time

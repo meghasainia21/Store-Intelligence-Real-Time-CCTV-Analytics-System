@@ -1,10 +1,4 @@
-"""
-zones.py — Zone classification from bounding box position.
 
-Maps pixel coordinates to store zones defined in store_layout.json.
-Supports both rectangular zone definitions and polygon zones.
-Handles camera-specific zone mappings (entry cam sees fewer zones than floor cam).
-"""
 
 from __future__ import annotations
 
@@ -16,8 +10,7 @@ import numpy as np
 
 logger = logging.getLogger("zones")
 
-# Fallback zone layout for Brigade Bangalore (STORE_BLR_002)
-# Derived from the store layout file and typical Indian beauty retail layout
+
 DEFAULT_ZONES = {
     "STORE_BLR_002": {
         "store_id": "STORE_BLR_002",

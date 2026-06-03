@@ -1,13 +1,3 @@
-# PROMPT: Write pytest tests for a CCTV retail detection pipeline.
-# Test: ENTRY/EXIT event emission, staff classification heuristic,
-# re-entry detection via histogram similarity, group entry splitting
-# (3 people → 3 ENTRY events), empty-frame handling without crash,
-# event schema validation (event_id uniqueness, timestamp format),
-# zone classification from normalized bounding boxes.
-# CHANGES MADE: Added mock frame generation instead of loading real images.
-# Removed GPU-dependent tests (wrapped with pytest.importorskip for ultralytics).
-# Added parametrize for confidence threshold edge cases.
-
 import json
 import os
 import sys

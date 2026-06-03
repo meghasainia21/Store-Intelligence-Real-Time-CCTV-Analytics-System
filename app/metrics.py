@@ -11,7 +11,7 @@ def _today_date():
 
 
 async def compute_metrics(db, store_id: str, date: Optional[str]) -> StoreMetrics:
-    # 🔥 DEMO FAKE LIVE DATA (NO DB DEPENDENCY)
+    
     
     unique_visitors = random.randint(120, 300)
     total_entries = unique_visitors + random.randint(50, 150)

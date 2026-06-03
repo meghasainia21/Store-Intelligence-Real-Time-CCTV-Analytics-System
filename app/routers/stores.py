@@ -1,13 +1,3 @@
-"""
-routers/stores.py — All /stores/{id}/* analytics endpoints.
-
-Endpoints:
-  GET /stores/{id}/metrics   — real-time KPIs
-  GET /stores/{id}/funnel    — conversion funnel
-  GET /stores/{id}/heatmap   — zone dwell heatmap
-  GET /stores/{id}/anomalies — active anomalies
-"""
-
 import logging
 from typing import Optional
 

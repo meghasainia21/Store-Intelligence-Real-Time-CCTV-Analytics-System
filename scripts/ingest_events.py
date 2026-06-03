@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-"""scripts/ingest_events.py — Bulk-ingest a JSONL events file into the API."""
 
 import argparse, json, sys
 import requests

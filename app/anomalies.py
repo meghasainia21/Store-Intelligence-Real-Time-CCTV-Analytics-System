@@ -1,24 +1,3 @@
-"""
-anomalies.py — Real-time anomaly detection.
-
-Detects:
-  QUEUE_SPIKE        — billing queue depth above threshold
-  CONVERSION_DROP    — today's conversion below 7-day rolling average
-  DEAD_ZONE          — no zone visits in past 30 minutes
-  HIGH_ABANDONMENT   — abandonment rate above threshold
-
-Each anomaly carries severity (INFO/WARN/CRITICAL) and a suggested_action.
-
-# PROMPT: Design an anomaly detection system for a retail analytics API.
-# It needs to detect queue spikes, conversion drops vs 7-day average,
-# dead zones (no traffic in 30min), and high abandonment. Each anomaly
-# should have severity INFO/WARN/CRITICAL and a concrete suggested_action.
-# CHANGES MADE: Added hysteresis to QUEUE_SPIKE to avoid flapping.
-# Changed 7-day rolling window to use actual day-level aggregation rather
-# than a naive count. Added DEAD_ZONE only for FLOOR zones, not BILLING
-# (billing can legitimately be empty).
-"""
-
 from __future__ import annotations
 
 import logging

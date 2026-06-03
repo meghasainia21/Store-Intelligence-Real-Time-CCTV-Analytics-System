@@ -1,8 +1,3 @@
-"""
-models.py — Pydantic event and response schema definitions.
-
-All validation happens here. Matches the challenge's required schema exactly.
-"""
 
 from __future__ import annotations
 

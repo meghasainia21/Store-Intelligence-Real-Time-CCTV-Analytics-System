@@ -1,10 +1,3 @@
-"""
-routers/health.py — GET /health
-
-Returns service status, DB status, and per-store feed freshness.
-STALE_FEED is raised if any store's last event is >10 minutes old.
-This is the endpoint an on-call engineer checks first.
-"""
 
 import logging
 import time

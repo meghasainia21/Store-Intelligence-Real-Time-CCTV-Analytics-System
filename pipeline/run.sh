@@ -1,6 +1,4 @@
 #!/usr/bin/env bash
-# run.sh — Process all CCTV clips and feed events into the Intelligence API
-# Usage: ./run.sh [path_to_clips_dir] [output_dir]
 
 set -euo pipefail
 
@@ -91,13 +89,6 @@ print(f"  Ingested {total} events (parse errors: {errors})")
 PYEOF
 }
 
-# --- Main loop ---
-# Walk through clips directory. Expected structure:
-#   clips/
-#     STORE_BLR_002/
-#       CAM_ENTRY_01.mp4
-#       CAM_FLOOR_01.mp4
-#       CAM_BILLING_01.mp4
 
 if [ ! -d "$CLIPS_DIR" ]; then
     echo "WARNING: Clips directory not found at $CLIPS_DIR"

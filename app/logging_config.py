@@ -1,6 +1,3 @@
-"""
-logging_config.py — Structured JSON logging for production.
-"""
 
 import logging
 import json

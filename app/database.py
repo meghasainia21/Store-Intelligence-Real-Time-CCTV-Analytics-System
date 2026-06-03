@@ -1,11 +1,3 @@
-"""
-database.py — Async SQLite database layer using aiosqlite.
-
-Schema designed for time-series event queries. Indexed on:
-  - (store_id, timestamp) — most common filter
-  - (store_id, visitor_id) — session reconstruction
-  - event_id — idempotency deduplication
-"""
 
 import logging
 import os
