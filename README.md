@@ -192,7 +192,7 @@ python scripts/ingest_events.py --file data/events/demo.jsonl
 
 ## 👩‍💻 Author
 
-<b>Megha Sainia  </b>
+<b>Megha Sainia</b><br><br>
 Engineering Student | Web Dev + DSA Enthusiast  
 GitHub: https://github.com/meghasainia21
 
