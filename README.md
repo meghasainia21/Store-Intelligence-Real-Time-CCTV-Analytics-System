@@ -54,8 +54,12 @@ Live Web Dashboard UI
 
 ---
 
+
+---
+
 # 📁 Project Structure
 
+```
 store-intelligence/
 │
 ├── app/
@@ -91,8 +95,8 @@ store-intelligence/
 ├── Dockerfile
 ├── requirements.txt
 └── README.md
+```
 
----
 
 # ⚙️ Tech Stack
 
