@@ -117,8 +117,30 @@ git clone https://github.com/your-username/store-intelligence.git
 cd store-intelligence
 ```
 
-### 2️⃣ Create Virtual Environment
+### 2️. Create Virtual Environment
 
 ```bash
 python -m venv venv
 venv\Scripts\activate   # Windows
+
+```
+
+### 3.Install Dependencies
+
+```bash
+pip install -r requirements.txt
+
+```
+
+### 4. Run FastAPI Server
+
+```bash
+uvicorn app.main:app --reload
+
+```
+
+### 5. Open Dashboard
+```bash
+http://localhost:8000/dashboard
+
+```
