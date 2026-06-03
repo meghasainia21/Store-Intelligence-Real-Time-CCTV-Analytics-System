@@ -1,22 +1,3 @@
-"""
-tracker.py — Multi-object tracker with appearance-based Re-ID.
-
-Implements a ByteTrack-inspired IoU + appearance matching tracker.
-Each track maintains a colour histogram for Re-ID across occlusion and
-camera cuts. Re-entry is detected by comparing an exited visitor's
-histogram against new detections using Bhattacharyya distance.
-
-# PROMPT: Build a ByteTrack-style tracker that: assigns stable track IDs,
-# handles occlusion with appearance re-ID using colour histograms, detects
-# re-entry (same person returning after EXIT), returns per-track status
-# (new/active/lost/reentry), computes per-track dwell time in milliseconds,
-# and handles the edge case of two people entering from the same direction
-# 3 seconds apart without ID collision.
-# CHANGES MADE: Added histogram smoothing to reduce re-ID errors in mixed
-# lighting. Changed re-entry window from 60s to 180s to match real dwell
-# patterns. Added minimum_track_age guard to avoid emitting events for
-# 1-frame phantom detections.
-"""
 
 from __future__ import annotations
 
