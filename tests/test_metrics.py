@@ -1,12 +1,3 @@
-# PROMPT: Write pytest async tests for a FastAPI store analytics API.
-# Cover: POST /events/ingest idempotency, GET /stores/{id}/metrics with
-# staff exclusion, GET /stores/{id}/funnel session deduplication,
-# GET /stores/{id}/heatmap data_confidence flag, GET /health STALE_FEED,
-# zero-purchase store, all-staff clip, re-entry not double-counting visitors,
-# empty store handling. Use httpx AsyncClient with in-memory SQLite.
-# CHANGES MADE: Replaced in-memory sqlite fixture with tmp_path-based DB
-# to avoid test isolation issues with global aiosqlite connection.
-# Added explicit event_type REENTRY test for funnel dedup.
 
 import asyncio
 import json
