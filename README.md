@@ -115,3 +115,10 @@ store-intelligence/
 ```bash
 git clone https://github.com/your-username/store-intelligence.git
 cd store-intelligence
+```
+
+### 2️⃣ Create Virtual Environment
+
+```bash
+python -m venv venv
+venv\Scripts\activate   # Windows
