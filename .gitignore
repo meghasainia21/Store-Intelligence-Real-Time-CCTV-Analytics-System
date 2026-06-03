@@ -216,3 +216,33 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+# =========================
+# YOUR PROJECT SPECIFIC (IMPORTANT)
+# =========================
+
+# CCTV / Data (VERY IMPORTANT)
+data/
+datasets/
+videos/
+frames/
+
+# Databases
+*.db
+*.sqlite
+*.sqlite3
+
+# Logs
+logs/
+*.log
+
+# Model outputs (if your pipeline generates these)
+outputs/
+results/
+
+# Temporary pipeline files
+temp/
+tmp/
+
+# System files
+.DS_Store
+Thumbs.db
