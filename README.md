@@ -144,3 +144,60 @@ uvicorn app.main:app --reload
 http://localhost:8000/dashboard
 
 ```
+
+## 📡 Data Ingestion (Demo Mode)
+
+### 6️. Generate Synthetic Events
+
+```bash
+python scripts/generate_synthetic_events.py --output data/events/demo.jsonl
+
+```
+
+### 7. Ingest into System
+
+```bash
+python scripts/ingest_events.py --file data/events/demo.jsonl
+
+```
+## 📊 Sample Metrics
+
+- Unique Visitors: 1200+
+- Conversion Rate: 3.2%
+- Avg Dwell Time: 4.8 min
+- Queue Depth: Live
+- Abandonment Rate: 6.1%
+
+---
+
+## 🧠 Key Design Decisions
+
+- ✔ Event-driven architecture
+- ✔ Time-series optimized queries (store_id, timestamp)
+- ✔ SSE-based real-time streaming
+- ✔ Idempotent ingestion using event_id
+- ✔ Modular analytics engine
+
+---
+
+## 📌 Future Improvements
+
+- Kafka event streaming
+- YOLO-based real CCTV detection
+- Redis caching layer
+- Multi-store analytics
+- Role-based admin panel
+
+---
+
+## 👩‍💻 Author
+
+Megha Sainia  
+Engineering Student | Web Dev + DSA Enthusiast  
+GitHub: https://github.com/meghasainia21
+
+---
+
+## ⭐ Support
+
+If you like this project, give it a ⭐ on GitHub — it helps a lot!
