@@ -1,10 +1,4 @@
-"""
-emit.py — Event schema definition and JSONL emission.
 
-Validates events against the challenge schema before writing.
-Every event gets a globally unique UUID. Low-confidence events
-are flagged but NOT suppressed.
-"""
 
 from __future__ import annotations
 
