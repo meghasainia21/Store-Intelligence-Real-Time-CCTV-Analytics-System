@@ -1,13 +1,3 @@
-#!/usr/bin/env python3
-"""
-generate_synthetic_events.py
-Generates a realistic stream of JSONL events for demo / testing
-when real CCTV clips are not available.
-
-Simulates Brigade Bangalore store (STORE_BLR_002) on 10-Apr-2026.
-Based on actual POS transaction data from the provided CSV.
-"""
-
 import argparse
 import json
 import random
